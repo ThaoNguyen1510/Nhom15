@@ -52,8 +52,8 @@ namespace Nhom15
         SqlConnection cnn = new SqlConnection("Data Source=localhost;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
         private void ketnoidl()
         {
-            cnn.Open();
-            string sql = "select * from ChuyenMon";
+            string sql;
+            sql = "select * from ChuyenMon";
             SqlCommand com = new SqlCommand(sql, cnn);
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com);
