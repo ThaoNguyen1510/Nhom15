@@ -42,14 +42,16 @@ namespace  Nhom15
                 MessageBox.Show("Bạn chưa điền thông tin tài khoản");
             if (txtMatKhau.Text.Length == 0)
                 MessageBox.Show("Mật khẩu sai");
-        
+        Form1 f1 = new Form1();
         Frmmain fm = new Frmmain();
             if (this.txtTaiKhoan.Text == "nhom15" && this.txtMatKhau.Text == "1")
             {
                 fm.Show();
+                f1.Close();
             }
             else
                 MessageBox.Show("Thông tin đăng nhập sai");
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

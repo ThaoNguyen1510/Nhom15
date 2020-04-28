@@ -39,7 +39,15 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.maPhongBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenPhongBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExitPB = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,14 +114,14 @@
             // 
             // txtMaPB
             // 
-            this.txtMaPB.Location = new System.Drawing.Point(217, 62);
+            this.txtMaPB.Location = new System.Drawing.Point(204, 65);
             this.txtMaPB.Name = "txtMaPB";
             this.txtMaPB.Size = new System.Drawing.Size(198, 22);
             this.txtMaPB.TabIndex = 7;
             // 
             // txtTenPB
             // 
-            this.txtTenPB.Location = new System.Drawing.Point(217, 123);
+            this.txtTenPB.Location = new System.Drawing.Point(204, 123);
             this.txtTenPB.Name = "txtTenPB";
             this.txtTenPB.Size = new System.Drawing.Size(198, 22);
             this.txtTenPB.TabIndex = 8;
@@ -121,14 +129,14 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(217, 179);
+            this.txtDiaChi.Location = new System.Drawing.Point(204, 182);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(524, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(414, 22);
             this.txtDiaChi.TabIndex = 9;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(217, 227);
+            this.txtSDT.Location = new System.Drawing.Point(204, 227);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(198, 22);
             this.txtSDT.TabIndex = 10;
@@ -136,29 +144,115 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 288);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maPhongBan,
+            this.tenPhongBan,
+            this.diachi,
+            this.dienthoai});
+            this.dataGridView1.Location = new System.Drawing.Point(33, 288);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(465, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(569, 150);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // maPhongBan
+            // 
+            this.maPhongBan.DataPropertyName = "maPhongBan";
+            this.maPhongBan.HeaderText = "Mã phòng ban";
+            this.maPhongBan.MinimumWidth = 6;
+            this.maPhongBan.Name = "maPhongBan";
+            this.maPhongBan.Width = 125;
+            // 
+            // tenPhongBan
+            // 
+            this.tenPhongBan.DataPropertyName = "tenPhongBan";
+            this.tenPhongBan.HeaderText = "Tên phòng ban";
+            this.tenPhongBan.MinimumWidth = 6;
+            this.tenPhongBan.Name = "tenPhongBan";
+            this.tenPhongBan.Width = 125;
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "diachi";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.MinimumWidth = 6;
+            this.diachi.Name = "diachi";
+            this.diachi.Width = 125;
+            // 
+            // dienthoai
+            // 
+            this.dienthoai.DataPropertyName = "dienthoai";
+            this.dienthoai.HeaderText = "Số điện thoại";
+            this.dienthoai.MinimumWidth = 6;
+            this.dienthoai.Name = "dienthoai";
+            this.dienthoai.Width = 125;
             // 
             // btnExitPB
             // 
             this.btnExitPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitPB.Location = new System.Drawing.Point(682, 374);
             this.btnExitPB.Name = "btnExitPB";
-            this.btnExitPB.Size = new System.Drawing.Size(75, 46);
+            this.btnExitPB.Size = new System.Drawing.Size(69, 50);
             this.btnExitPB.TabIndex = 12;
             this.btnExitPB.Text = "Exit";
             this.btnExitPB.UseVisualStyleBackColor = true;
             this.btnExitPB.Click += new System.EventHandler(this.btnExitPB_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(682, 288);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(69, 50);
+            this.btnXoa.TabIndex = 13;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(682, 37);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(69, 50);
+            this.btnLuu.TabIndex = 14;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(682, 199);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(69, 50);
+            this.btnSua.TabIndex = 15;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(682, 111);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(69, 50);
+            this.btnThem.TabIndex = 16;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // frmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnExitPB);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtSDT);
@@ -173,6 +267,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmPhongBan";
             this.Text = "frmPhongBan";
+            this.Load += new System.EventHandler(this.frmPhongBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,5 +288,13 @@
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnExitPB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maPhongBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenPhongBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dienthoai;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
     }
 }

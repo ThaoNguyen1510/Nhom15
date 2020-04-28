@@ -14,3 +14,9 @@ D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmChuyenMon.resources
 D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmPhongBan.resources
 D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmChucVu.resources
 D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmChiTietHD.resources
+D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmHopDong.resources
+D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmSoBHXH.resources
+D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmChiTietBHXH.resources
+D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmChiTietBHYT.resources
+D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmSoBHYT.resources
+D:\Nhóm 15\Nhom15\obj\Debug\Nhom15.frmLoaiHD.resources
