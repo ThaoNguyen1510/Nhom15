@@ -98,11 +98,7 @@ namespace Nhom15
                 txtMaChucVu.Focus();
                 return;
             }
-            if (tbCHVU.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+            
             txtMaChucVu.Text = dataGridView1.CurrentRow.Cells["maChucVu"].Value.ToString();
             txtTenChucVu.Text = dataGridView1.CurrentRow.Cells["tenChucVu"].Value.ToString();
             txtPhuCapCV.Text = dataGridView1.CurrentRow.Cells["phuCapCV"].Value.ToString();
